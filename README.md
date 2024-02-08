@@ -11,6 +11,28 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
+<!-- START OF NOTE -->
+This package is created using flutter 3.7.2 with dart 2.19.2
+The size occupied by the graph is MediaQuery.of(context).size.height * 0.6
+The bar graph requires two data.
+    - List<GraphModel> and a double.
+The array of GraphModel is used for plotting the data in graph bar.
+The double required is the largest value/data from the graph bar.
+
+Sample for list of GraphModel:
+List<GraphModel> graphModelList = [];
+ graphModelList.add
+ (
+    GraphModel
+    (
+        dateData: "07-02",
+        valueData: randomValue,
+        colorData: Colors.cyan
+    )
+ );
+
+
+<!-- END OF NOTE -->
 TODO: Put a short description of the package here that helps potential users
 know whether this package might be useful for them.
 
