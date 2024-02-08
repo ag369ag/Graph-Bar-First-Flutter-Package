@@ -47,16 +47,18 @@ start using the package.
 The size occupied by the graph is MediaQuery.of(context).size.height * 0.6
 
 The bar graph requires four data.
-    List<GraphModel>, double, Color, Color.
+
+List<GraphModel>, double, Color, Color.
 
 The array of GraphModel is used for plotting the data in graph bar.
-    The GraphModel consist of three data.
-        dateData 
-            Doesn't necessary mean it only requires date. This is a string so the user can change what should be words under the value.
-        valueData
-            A double which will be shown in the bar graph.
-        colorData
-            To make the UI customizable, this is also required so the user can input what is the color of the data.
+
+The GraphModel consist of three data.
+>dateData 
+>>Doesn't necessary mean it only requires date. This is a string so the user can change what should be words under the value.
+>valueData
+>>A double which will be shown in the bar graph.
+>colorData
+>>To make the UI customizable, this is also required so the user can input what is the color of the data.
 
 The double required is the largest value/data from the graph bar.
 
