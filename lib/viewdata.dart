@@ -5,11 +5,13 @@ class ViewData extends StatelessWidget {
   final String dataDate;
   final double dataValue;
   final Color dataColor;
+  final Color textColors;
   const ViewData(
       {super.key,
       required this.dataDate,
       required this.dataValue,
-      required this.dataColor});
+      required this.dataColor,
+      required this.textColors});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +32,7 @@ class ViewData extends StatelessWidget {
             ),
             Text(
               dataDate,
-              style: const TextStyle(fontSize: 10, color: Colors.white),
+              style: TextStyle(fontSize: 10, color: textColors),
             )
           ],
         ));

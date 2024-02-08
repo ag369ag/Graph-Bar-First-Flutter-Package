@@ -30,8 +30,15 @@ double largestValue = 0;
 class BarGraph extends StatefulWidget {
   final List<GraphModel> graphData;
   double largestValue;
+  final Color backgroundColor;
+  final Color textColor;
 
-  BarGraph({super.key, required this.graphData, required this.largestValue});
+  BarGraph(
+      {super.key,
+      required this.graphData,
+      required this.largestValue,
+      required this.backgroundColor,
+      required this.textColor});
 
   @override
   State<BarGraph> createState() => _BarGraphState();
@@ -66,8 +73,8 @@ class _BarGraphState extends State<BarGraph> {
     var size = MediaQuery.of(context).size;
     return Center(
         child: Container(
-      padding: EdgeInsets.all(10),
-      color: Colors.black,
+      padding: const EdgeInsets.all(10),
+      color: widget.backgroundColor,
       child: Row(mainAxisSize: MainAxisSize.min, children: [
         Column(
           mainAxisSize: MainAxisSize.min,
@@ -76,35 +83,35 @@ class _BarGraphState extends State<BarGraph> {
               height: size.height * 0.1,
               child: Text(
                 "$largestValue",
-                style: const TextStyle(color: Colors.white),
+                style: TextStyle(color: widget.textColor),
               ),
             ),
             SizedBox(
               height: size.height * 0.1,
               child: Text(
                 ((largestValue) * 0.8).toStringAsFixed(1),
-                style: const TextStyle(color: Colors.white),
+                style: TextStyle(color: widget.textColor),
               ),
             ),
             SizedBox(
               height: size.height * 0.1,
               child: Text(
                 ((largestValue) * 0.6).toStringAsFixed(1),
-                style: const TextStyle(color: Colors.white),
+                style: TextStyle(color: widget.textColor),
               ),
             ),
             SizedBox(
               height: size.height * 0.1,
               child: Text(
                 ((largestValue) * 0.4).toStringAsFixed(1),
-                style: const TextStyle(color: Colors.white),
+                style: TextStyle(color: widget.textColor),
               ),
             ),
             SizedBox(
               height: size.height * 0.1,
               child: Text(
                 ((largestValue) * 0.2).toStringAsFixed(1),
-                style: const TextStyle(color: Colors.white),
+                style: TextStyle(color: widget.textColor),
               ),
             )
           ],
@@ -112,7 +119,7 @@ class _BarGraphState extends State<BarGraph> {
         Container(
           height: size.height * 0.6,
           width: size.width * 0.8,
-          color: Colors.black,
+          color: widget.backgroundColor,
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: widget.graphData.map((e) {
@@ -129,11 +136,12 @@ class _BarGraphState extends State<BarGraph> {
               return Container(
                   height: ((0.6 * size.height)),
                   width: 40,
-                  color: Colors.black,
+                  color: widget.backgroundColor,
                   child: ViewData(
                       dataDate: e.dateData.toString(),
                       dataValue: double.parse(e.valueData.toString()),
-                      dataColor: e.colorData));
+                      dataColor: e.colorData,
+                      textColors: widget.textColor));
             }).toList(),
           ),
         ),

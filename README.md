@@ -15,9 +15,10 @@ and the Flutter guide for
 This package is created using flutter 3.7.2 with dart 2.19.2
 The size occupied by the graph is MediaQuery.of(context).size.height * 0.6
 The bar graph requires two data.
-    - List<GraphModel> and a double.
+    - List<GraphModel>, double, Color, Color.
 The array of GraphModel is used for plotting the data in graph bar.
 The double required is the largest value/data from the graph bar.
+The first color is for background color and the second is for text color.
 
 Sample for list of GraphModel:
 List<GraphModel> graphModelList = [];
