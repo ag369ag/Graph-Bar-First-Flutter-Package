@@ -1,7 +1,8 @@
-name: flutter_package_test_1
-description: A new Flutter package project.
+name: Simple_Bar_Graph
+description: Simple bar graph with customizable UI.
 version: 0.0.1
-homepage:
+homepage: https://github.com/ag369ag/Graph-Bar-First-Flutter-Package.git
+repository: https://github.com/ag369ag/Graph-Bar-First-Flutter-Package.git
 
 environment:
   sdk: '>=2.19.2 <3.0.0'

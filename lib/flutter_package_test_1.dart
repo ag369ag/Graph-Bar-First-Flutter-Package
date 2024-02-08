@@ -1,10 +1,11 @@
 library flutter_package_test_1;
 
 import 'dart:async';
-
+import 'package:Simple_Bar_Graph/model.dart';
+import 'package:Simple_Bar_Graph/viewdata.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_package_test_1/model.dart';
-import 'package:flutter_package_test_1/viewdata.dart';
+//import 'package:flutter_package_test_1/model.dart';
+//import 'package:flutter_package_test_1/viewdata.dart';
 
 //List<GraphModel> graphData = [];
 // var graphData = [
