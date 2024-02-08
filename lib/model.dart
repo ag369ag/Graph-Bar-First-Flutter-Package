@@ -2,7 +2,7 @@ import 'dart:ui';
 
 class GraphModel {
   final String dateData;
-  final String valueData;
+  final double valueData;
   final Color colorData;
 
   GraphModel(

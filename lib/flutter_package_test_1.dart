@@ -47,7 +47,7 @@ class BarGraph extends StatefulWidget {
 class _BarGraphState extends State<BarGraph> {
   void getLargestValue() {
     for (var element in widget.graphData) {
-      var val = double.parse(element.valueData.toString());
+      var val = element.valueData;
       if (val > largestValue) {
         setState(() {
           largestValue = val;
@@ -139,7 +139,7 @@ class _BarGraphState extends State<BarGraph> {
                   color: widget.backgroundColor,
                   child: ViewData(
                       dataDate: e.dateData.toString(),
-                      dataValue: double.parse(e.valueData.toString()),
+                      dataValue: e.valueData,
                       dataColor: e.colorData,
                       textColors: widget.textColor));
             }).toList(),
