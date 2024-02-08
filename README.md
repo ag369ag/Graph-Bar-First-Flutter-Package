@@ -53,12 +53,18 @@ List<GraphModel>, double, Color, Color.
 The array of GraphModel is used for plotting the data in graph bar.
 
 The GraphModel consist of three data.
+
 dateData 
->Doesn't necessary mean it only requires date. This is a string so the user can change what should be words under the value.
+
+Doesn't necessary mean it only requires date. This is a string so the user can change what should be words under the value.
+
 valueData
->A double which will be shown in the bar graph.
+
+A double which will be shown in the bar graph.
+
 colorData
->To make the UI customizable, this is also required so the user can input what is the color of the data.
+
+To make the UI customizable, this is also required so the user can input what is the color of the data.
 
 The double required is the largest value/data from the graph bar.
 
