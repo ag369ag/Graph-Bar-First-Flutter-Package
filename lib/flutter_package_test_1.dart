@@ -6,11 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_package_test_1/model.dart';
 import 'package:flutter_package_test_1/viewdata.dart';
 
-// /// A Calculator.
-// class Calculator {
-//   /// Returns [value] plus 1.
-//   int addOne(int value) => value + 1;
-// }
 //List<GraphModel> graphData = [];
 // var graphData = [
 //   ["07-02", "9", Colors.cyan],
@@ -45,25 +40,15 @@ class BarGraph extends StatefulWidget {
 }
 
 class _BarGraphState extends State<BarGraph> {
-  void getLargestValue() {
-    for (var element in widget.graphData) {
-      var val = element.valueData;
-      if (val > largestValue) {
-        setState(() {
-          largestValue = val;
-        });
-      }
-    }
-  }
-
-  // void getUpdate() {
-  //   Timer.periodic(const Duration(seconds: 1), (timer) {
-  //     int graphDataCount = 0;
-  //     if (graphDataCount != widget.graphData.length) {
-  //       getLargestValue();
-  //       graphDataCount = widget.graphData.length;
+  // void getLargestValue() {
+  //   for (var element in widget.graphData) {
+  //     var val = element.valueData;
+  //     if (val > largestValue) {
+  //       setState(() {
+  //         largestValue = val;
+  //       });
   //     }
-  //   });
+  //   }
   // }
 
   @override
@@ -123,16 +108,7 @@ class _BarGraphState extends State<BarGraph> {
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: widget.graphData.map((e) {
-              getLargestValue();
-              // for (var element in widget.graphData) {
-              //   //print((element[2]));
-              //   var val = double.parse(element.valueData.toString());
-              //   if (val > largestValue) {
-              //     setState(() {
-              //       largestValue = val;
-              //     });
-              //   }
-              // }
+              //getLargestValue();
               return Container(
                   height: ((0.6 * size.height)),
                   width: 40,
