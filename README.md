@@ -25,32 +25,23 @@ The first color is for background color and the second is for text color.
 
  END OF NOTE -->
 
-<!--
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
--->
+
 
 ## Features
 
 This bar graph is created to show simple data with customizable UI.
 
-<!--
-TODO: List what your package can do. Maybe include images, gifs, or videos.
--->
+
 
 ## Getting started
 
-<!--
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
--->
 1. The size occupied by the graph is 
-```
+```dart
 MediaQuery.of(context).size.height * 0.6
 ```
 
 2. The bar graph requires four data.
-```
+```dart
 List<GraphModel>, double, Color, Color.
 ```
 
@@ -76,16 +67,8 @@ i. To make the UI customizable, this is also required so the user can input what
 
 ## Usage
 
-<!--
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
-```
--->
 Sample for getting the largestData:
-```
+```dart
 double largestData = 0;
 for(var item in graphModelList)
 {
@@ -100,7 +83,7 @@ for(var item in graphModelList)
 ```
 
 Sample for list of GraphModel:
-```
+```dart
 List<GraphModel> graphModelList = [];
  graphModelList.add
  (
@@ -114,7 +97,7 @@ List<GraphModel> graphModelList = [];
 ```
 
 Sample for BarGraph:
-```
+```dart
 BarGraph
 (
     graphData: graphModelList,
@@ -123,11 +106,3 @@ BarGraph
     textColor: Colors.white
 )
 ```
-
-<!-- 
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
--->

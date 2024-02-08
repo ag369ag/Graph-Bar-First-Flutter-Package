@@ -1,11 +1,8 @@
 library flutter_package_test_1;
 
-import 'dart:async';
-import 'package:Simple_Bar_Graph/model.dart';
-import 'package:Simple_Bar_Graph/viewdata.dart';
+import 'package:bar_graph/model.dart';
+import 'package:bar_graph/viewdata.dart';
 import 'package:flutter/material.dart';
-//import 'package:flutter_package_test_1/model.dart';
-//import 'package:flutter_package_test_1/viewdata.dart';
 
 //List<GraphModel> graphData = [];
 // var graphData = [
@@ -25,7 +22,7 @@ double largestValue = 0;
 
 class BarGraph extends StatefulWidget {
   final List<GraphModel> graphData;
-  double largestValue;
+  late double largestValue;
   final Color backgroundColor;
   final Color textColor;
 
