@@ -44,31 +44,35 @@ TODO: List what your package can do. Maybe include images, gifs, or videos.
 TODO: List prerequisites and provide or point to information on how to
 start using the package.
 -->
-The size occupied by the graph is MediaQuery.of(context).size.height * 0.6
+1. The size occupied by the graph is 
+```
+MediaQuery.of(context).size.height * 0.6
+```
 
-The bar graph requires four data.
-
+2. The bar graph requires four data.
+```
 List<GraphModel>, double, Color, Color.
+```
 
-The array of GraphModel is used for plotting the data in graph bar.
+3. The array of GraphModel is used for plotting the data in graph bar.
 
-The GraphModel consist of three data.
+4. The GraphModel consist of three data.
 
-dateData 
+I. dateData 
 
-Doesn't necessary mean it only requires date. This is a string so the user can change what should be words under the value.
+i. Doesn't necessary mean it only requires date. This is a string so the user can change what should be words under the value.
 
-valueData
+II. valueData
 
-A double which will be shown in the bar graph.
+i. double which will be shown in the bar graph.
 
-colorData
+III. colorData
 
-To make the UI customizable, this is also required so the user can input what is the color of the data.
+i. To make the UI customizable, this is also required so the user can input what is the color of the data.
 
-The double required is the largest value/data from the graph bar.
+5. The double required is the largest value/data from the graph bar.
 
-The first color is for background color and the second is for text color.
+6. The first color is for background color and the second is for text color.
 
 ## Usage
 
@@ -81,7 +85,6 @@ const like = 'sample';
 ```
 -->
 Sample for getting the largestData:
-
 ```
 double largestData = 0;
 for(var item in graphModelList)
@@ -97,7 +100,6 @@ for(var item in graphModelList)
 ```
 
 Sample for list of GraphModel:
-
 ```
 List<GraphModel> graphModelList = [];
  graphModelList.add
@@ -112,7 +114,6 @@ List<GraphModel> graphModelList = [];
 ```
 
 Sample for BarGraph:
-
 ```
 BarGraph
 (
