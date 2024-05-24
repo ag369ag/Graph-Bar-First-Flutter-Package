@@ -23,7 +23,7 @@ class ViewData extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Container(
-              height: ((size.height * 0.5) / largestValue) * dataValue,
+              height: ((graphSize) / largestValue) * dataValue,
               //((dataValue  / largestValue) * size.width)/1.5 ,
               //((size.width / largestValue) * dataValue)   ,
               //((dataValue  / largestValue) * size.width)/1.5 ,

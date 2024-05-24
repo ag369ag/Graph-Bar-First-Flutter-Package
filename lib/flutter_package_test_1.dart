@@ -19,19 +19,22 @@ import 'package:flutter/material.dart';
 // ];
 
 double largestValue = 0;
+double graphSize = 0;
 
 class BarGraph extends StatefulWidget {
   final List<GraphModel> graphData;
   late double largestValue;
   final Color backgroundColor;
   final Color textColor;
+  final double graphHeight;
 
   BarGraph(
       {super.key,
       required this.graphData,
       required this.largestValue,
       required this.backgroundColor,
-      required this.textColor});
+      required this.textColor,
+      required this.graphHeight});
 
   @override
   State<BarGraph> createState() => _BarGraphState();
@@ -52,7 +55,7 @@ class _BarGraphState extends State<BarGraph> {
   @override
   Widget build(BuildContext context) {
     largestValue = widget.largestValue;
-
+    graphSize = widget.graphHeight;
     var size = MediaQuery.of(context).size;
     return Center(
         child: Container(
@@ -63,35 +66,35 @@ class _BarGraphState extends State<BarGraph> {
           mainAxisSize: MainAxisSize.min,
           children: [
             SizedBox(
-              height: size.height * 0.1,
+              height: widget.graphHeight / 5,
               child: Text(
                 "$largestValue",
                 style: TextStyle(color: widget.textColor),
               ),
             ),
             SizedBox(
-              height: size.height * 0.1,
+              height: widget.graphHeight / 5,
               child: Text(
                 ((largestValue) * 0.8).toStringAsFixed(1),
                 style: TextStyle(color: widget.textColor),
               ),
             ),
             SizedBox(
-              height: size.height * 0.1,
+              height: widget.graphHeight / 5,
               child: Text(
                 ((largestValue) * 0.6).toStringAsFixed(1),
                 style: TextStyle(color: widget.textColor),
               ),
             ),
             SizedBox(
-              height: size.height * 0.1,
+              height: widget.graphHeight / 5,
               child: Text(
                 ((largestValue) * 0.4).toStringAsFixed(1),
                 style: TextStyle(color: widget.textColor),
               ),
             ),
             SizedBox(
-              height: size.height * 0.1,
+              height: widget.graphHeight / 5,
               child: Text(
                 ((largestValue) * 0.2).toStringAsFixed(1),
                 style: TextStyle(color: widget.textColor),
@@ -100,7 +103,7 @@ class _BarGraphState extends State<BarGraph> {
           ],
         ),
         Container(
-          height: size.height * 0.6,
+          height: widget.graphHeight,
           width: size.width * 0.8,
           color: widget.backgroundColor,
           child: ListView(
@@ -108,7 +111,7 @@ class _BarGraphState extends State<BarGraph> {
             children: widget.graphData.map((e) {
               //getLargestValue();
               return Container(
-                  height: ((0.6 * size.height)),
+                  height: (widget.graphHeight),
                   width: 40,
                   color: widget.backgroundColor,
                   child: ViewData(

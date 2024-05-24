@@ -36,13 +36,16 @@ This bar graph is created to show simple data with customizable UI.
 ## Getting started
 
 1. The size occupied by the graph is 
+Before:
 ```dart
 MediaQuery.of(context).size.height * 0.6
 ```
+Now:
+Height of the bar graph will based on the user's input.
 
 2. The bar graph requires four data.
 ```dart
-List<GraphModel>, double, Color, Color.
+List<GraphModel>, double, Color, Color, double.dart pu
 ```
 
 3. The array of GraphModel is used for plotting the data in graph bar.
@@ -103,6 +106,7 @@ BarGraph
     graphData: graphModelList,
     largestValue: largestData,
     backgroundColor: Colors.black,
-    textColor: Colors.white
+    textColor: Colors.white,
+    graphHeight: 300.0
 )
 ```

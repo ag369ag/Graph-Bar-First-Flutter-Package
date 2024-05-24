@@ -1,6 +1,6 @@
 name: bar_graph
 description: Simple bar graph with customizable UI.
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/ag369ag/Graph-Bar-First-Flutter-Package.git
 repository: https://github.com/ag369ag/Graph-Bar-First-Flutter-Package.git
 
